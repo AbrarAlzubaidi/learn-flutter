@@ -18,5 +18,8 @@
 - `pubspec.lock` a file holds the packages and dependencies of flutter app, will be generated automatically of your `pubspe.yaml` file to show the dependencies and packages in another way (dont touch this file)
 - `pubspec.yaml` a file to manage the dependencies of your flutter project
 - `<flutter_app_name>.iml` is a file holdes the xml structure. (dont touch this file)
+- `main.dart` file should be the main file for flutter app to run it (it will hold all the imported files)
+
+
 
 - if you change anything inside the `pubspec.yaml` file run this command in the terminal `flutter packages get` so flutter get the updates.
