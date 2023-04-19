@@ -8,6 +8,17 @@ void main(List<String> args) {
 
 class QuestionApp extends StatelessWidget {
   const QuestionApp({super.key}); // create constructor
+  static var questionList = [
+    'when we will leave?',
+    'what will we eat today?',
+    'do i feel boaring?'
+  ];
+  static var questionIndex = 0;
+  void questionAnswer() {
+    questionIndex = questionIndex + 1;
+    print(questionIndex);
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,17 +30,27 @@ class QuestionApp extends StatelessWidget {
         ),
         backgroundColor: const Color.fromARGB(255, 248, 203, 143),
       ),
-      body: Row(children: const [
+      body: Column(children: [
         Text(
-          'the body goes here',
-          style: TextStyle(
+          questionList[questionIndex],
+          style: const TextStyle(
             color: Color(0xFFFFFFFF),
           ),
         ),
         ElevatedButton(
-            onPressed: null,
-            child:
-                Text('click me!', style: TextStyle(color: Color(0xFFFFFFFF)))),
+            onPressed: questionAnswer,
+            child: const Text('Answer 1',
+                style: TextStyle(color: Color(0xFFFFFFFF)))),
+        ElevatedButton(
+            onPressed: questionAnswer,
+            // onPressed: answerQuestion(),
+            child: const Text('Answer 2',
+                style: TextStyle(color: Color(0xFFFFFFFF)))),
+        ElevatedButton(
+            onPressed: questionAnswer,
+            // onPressed: answerQuestion(),
+            child: const Text('Answer 3',
+                style: TextStyle(color: Color(0xFFFFFFFF)))),
       ]),
       backgroundColor: const Color(0xFFFF9000),
     ));
