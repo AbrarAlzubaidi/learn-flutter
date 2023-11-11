@@ -1,17 +1,17 @@
-flutter is about widgets.
+# flutter is about widgets.
 
 - whenever you create a widget you have to create it as class based.(its a special type of object)
 - after creating the widget class it should inherit from another class by `extends` word 
-    - this thing called inheritance. each class extends from one class
-    - it should extends from `StatelessWidget` class.
+  - this thing called inheritance. each class extends from one class
+  - it should extends from `StatelessWidget` class.
 
-- define a build method isnside the class. also it should decorated by `@override`, because we override the build method that inside the `StatelessWidget` class
+- define a build method inside the class. also it should decorated by `@override`, because we override the build method that inside the `StatelessWidget` class
 - whenever u call build method pass to it context prop. and it is an object its type is BuildContextv
 - any class should return a widget so build method will return it 
 - any build wedget function should return a widget called `MaterialApp()`
-    - inside the `MaterialApp()` we have to pass the argument, but there are a lot of them so you can choose the one that you need.
-    - at first we just need the `home` argument.
-        - home argument is the core widget that flutter bring on the screen when the the app is mounted.
+  - inside the `MaterialApp()` we have to pass the argument, but there are a lot of them so you can choose the one that you need.
+  - at first we just need the `home` argument.
+    - home argument is the core widget that flutter bring on the screen when the the app is mounted.
 
-- to run this widhet class you should call it in main function. so inside the main function
-    - you can call another function called `runApp(<calss_widget>)` and pass to it the class u want to display.
+- to run this wedget class you should call it in main function. so inside the main function
+  - you can call another function called `runApp(<calss_widget>)` and pass to it the class u want to display.
