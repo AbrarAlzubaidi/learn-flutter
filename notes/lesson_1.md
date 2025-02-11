@@ -4,7 +4,7 @@ it is a UI framework working with a collection of tools to build native cross pl
 
 flutter translate the code into a machine code that will be suitable for Android and IOS devices.
 
-flutter depends on SDK: software development toolkit. which is the collection of tools that will be installed and will help you to create the flutter app. 
+flutter depends on SDK: software development toolkit. which is the collection of tools that will be installed and will help you to create the flutter app.
 
 ![what is flutter](./assets/images/what-is-flutter.PNG)
 

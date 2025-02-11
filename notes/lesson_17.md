@@ -4,13 +4,12 @@
 
 - `web folder` to create a web project
 - `windows folder` to create windows desktop apps
-- `.idea folder` holds some configuration for android studio (do not delete this folder)
+- `.idea folder` holds some configuration for android studio **(do not delete this folder)**
 - `android folder` holds a complete android project, so when you run flutter project its inject this folder to create an android version from your flutter project.
 - `build folder` holds the result of your flutter app. (auto generated when you run the app)
 - `ios folder` holds a complete ios project, so when you run flutter project its inject this folder to create an ios version from your flutter project.
 - `macos folder` holds a complete macos desktop project, so when you run flutter project its inject this folder to create an macos version from your flutter project.
-- `ios folder` holds a complete linux desktop project, so when you run flutter project its inject this folder to create an linux version from your flutter project.
-- `lib folder` is the important folder that holds your flutter app in it
+folder that holds your flutter app in it
 - `test folder` is the folder that you can write your tests to test the app.
 
 ## files
