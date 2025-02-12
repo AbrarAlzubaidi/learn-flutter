@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/gradient_container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -97,39 +98,20 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    // context is the reference to the widget returned by the build method and it is used to access the theme, media query, etc.
+  Widget build(BuildContext context) { // context is the reference to the widget returned by the build method and it is used to access the theme, media query, etc.
+    var colorsTheme = const [
+      Color.fromARGB(255, 150, 209, 146),
+      Color.fromARGB(255, 45, 98, 45),
+      Color.fromARGB(255, 12, 65, 18),
+    ];
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Hello World'),
-          backgroundColor: const Color.fromARGB(255, 47, 29, 135),
+          backgroundColor: colorsTheme.last,
         ),
-        body: const GradientContainer(),
-      ),
-    );
-  }
-}
-
-class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 133, 101, 222),
-            Color.fromARGB(255, 47, 29, 135),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-      ),
-      child: const Center(
-        child: Text('Hello World',
-            style: TextStyle(fontSize: 42, color: Colors.white)),
+        body: GradientContainer(colorsTheme: colorsTheme),
       ),
     );
   }
