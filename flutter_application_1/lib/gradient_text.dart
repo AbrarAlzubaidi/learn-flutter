@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const textColor = Colors.white;
-const fontSize = 32.0;
+const fontSize = 30.0;
 
 class GradientText extends StatelessWidget {
   const GradientText(this.title, {super.key});
