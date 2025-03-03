@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HomePageBody extends StatelessWidget {
-  const HomePageBody({super.key});
+  // ** pass it as named parameter
+  // final Function changeScreen;
+  // const HomePageBody({super.key, this.changeScreen});
+
+  // ** pass it as positional parameter
+  const HomePageBody(this.changeScreen, {super.key});
+
+  final void Function() changeScreen;
 
   final textColor = const Color.fromARGB(255, 243, 202, 253);
 
@@ -24,7 +31,7 @@ class HomePageBody extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         OutlinedButton.icon(
-          onPressed: null,
+          onPressed: changeScreen,
           style: ButtonStyle(
             side: MaterialStateProperty.all(
                 BorderSide(color: textColor, width: 1.0)),

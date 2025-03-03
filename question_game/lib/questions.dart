@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Questions extends StatefulWidget{
+class Questions extends StatefulWidget {
   const Questions({super.key});
 
   @override
-  State<Questions> createState(){
+  State<Questions> createState() {
     return _QuestionsState();
   }
 }
 
-class _QuestionsState extends State<Questions>{
+class _QuestionsState extends State<Questions> {
   final questions = const [
     {
       'questionText': 'What\'s your favorite color?',
@@ -26,7 +26,16 @@ class _QuestionsState extends State<Questions>{
   ];
 
   @override
-  Widget build(BuildContext context){
-    return const Column(children: [Text('test')],);
+  Widget build(BuildContext context) {
+    return const Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          'test',
+          style: TextStyle(fontSize: 20, color: Colors.white),
+        ),
+      ],
+    );
   }
 }
