@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:question_game/home_body.dart';
-import 'package:question_game/questions.dart';
+import 'package:question_game/questions_screen.dart';
 
 class QuestionApp extends StatefulWidget{
   const QuestionApp({super.key});
@@ -12,24 +12,24 @@ class QuestionApp extends StatefulWidget{
 }
 
 class _QuestionAppState extends State<QuestionApp> {
-  // this variable to store the widget that will be displayed on the screen.
-  late Widget currentScreen;
-  @override
-  void initState(){
-    super.initState();
-    currentScreen = HomePageBody(changeScreen);
-  }
+  // this variable hold an identifier for the current screen as string
+  var currentScreen = 'home';
 
-  // this function that will switch between 2 screens depends on the button tapped or not.
-  // also this function should be passed to home_body.dart file to be used in the button.
+  // here we change the identifier to 'questions' when the button is pressed. 
   void changeScreen(){
     setState(() {
-      currentScreen = const Questions();
+      currentScreen = 'questions';
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    Widget screenWidget = HomePageBody(changeScreen);
+
+    if(currentScreen == 'questions'){
+      screenWidget = const Questions();
+    }
+    
     return MaterialApp(
       home: Scaffold(
         body: Container(
@@ -43,7 +43,8 @@ class _QuestionAppState extends State<QuestionApp> {
                 ]),
           ),
           child: Center(
-            child: currentScreen,
+            // here we use the currentScreen variable to decide which widget to show by using the advantage of the ternary operator
+            child: screenWidget,
           ),
         ),
       ),
